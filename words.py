@@ -16,8 +16,3 @@ for word in word_list:
     
 for word, count in word_frequency.items():
     print(f"{word}: {count}")
-
-    
-
-
-

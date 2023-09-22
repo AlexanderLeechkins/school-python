@@ -13,7 +13,3 @@ if today> birthday:
     birthday= datetime.date(today.year+1,month,day)
 days_till_birthday= birthday - today 
 print(days_till_birthday)
-
-
-
-
