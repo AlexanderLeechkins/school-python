@@ -49,3 +49,5 @@ while userinput != 5:
         quit_program()
     else:
         print("Invalid input, please enter a number 1-5")
+        break
+    
