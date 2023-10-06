@@ -5,12 +5,10 @@ def validate_number(Stringinput):
     if re.match(patterns, Stringinput):
         print("valid")
     else:
-        print("not valid")        
-    
+        print("not valid")    
 hi=1
 while hi==1:
     stringinput=(input("what string would you like to test(or quit) "))
     validate_number(stringinput)
     if stringinput== "quit":
         break
-     

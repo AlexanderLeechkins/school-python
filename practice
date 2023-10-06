@@ -7,8 +7,6 @@ def removeoflist():
     popnumber=int(input("what number of the list would you like removed(N for no more) "))
     list.pop(popnumber)
     s=-1
-    if popnumber =="N":
-        userinput
         
 def addtolist():
     addnumber=int(input("what number would you like to add to the list "))
@@ -23,9 +21,9 @@ userinput=input("what would you like to do to the list ")
 while userinput =="pop" or "push" or "peek":
     if userinput== "pop":
         removeoflist()
-    else:
-        break
     if userinput =="push":
         addtolist()
     if userinput =="peek":
         peeklist()
+
+
