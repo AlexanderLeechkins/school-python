@@ -4,6 +4,3 @@ class Vector:
         self.y = y
     def magnitudeValue(self):
         return self.x * self.x + self.y * self.y
-
-
-
