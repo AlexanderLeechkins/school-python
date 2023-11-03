@@ -77,12 +77,12 @@ class Deck:
         pass
 
 
-card = Card(52)
-print(card.get_suit()) 
-deck = Deck()
-deck.shuffle_deck()
+cardgame = Card(52)
+print(cardgame.get_suit()) 
+deckgame = Deck()
+deckgame.shuffle_deck()
 for i in range(52):
-    card = deck.take_top_card()
-    print(Card.get_long_name())
+    card = deckgame.take_top_card()
+    print(card)
 
     
