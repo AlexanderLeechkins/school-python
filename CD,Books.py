@@ -1,48 +1,40 @@
-class stock_items:
-    def __init__(self,)
-
-
-
-class Book:
-    def __init__(self,title,author,ISBN,OnLoan,DateAcquired):
+class Stock_items:
+    def __init__(self,title,Creator,DateAcquired):
         self.title = title
-        self.author = author
+        self.Creator = Creator 
+        self.DateAcquired = DateAcquired
+        self._OnLoan= False
+    
+    def setLoan(self):
+        self._OnLoan = True
+
+    def ReturnLoan(self):
+        self._OnLoan = False    
+
+class Book(Stock_items):
+    def __init__(self,title,Creator,ISBN,DateAcquired):
+        super(). __init__ (title,Creator,DateAcquired)
         self.ISBN = ISBN
-        self.OnLoan = OnLoan
-        self.DateAcquired = DateAcquired
+        
+    def display(self):
+        print(f"the books name is {self.title}\n the author's name is {self.Creator}\n the ISBN number is {self.ISBN}\n and the date is {self.DateAcquired}\n")
+
+class CD(Stock_items):
+    def __init__(self,title,Creator,PlayingTime,DateAcquired):
+       super(). __init__(title,Creator,DateAcquired)
+       self.PlayingTime = PlayingTime
+    
 
     def display(self):
-        print(f"the books name is {self.title}\n the author's name is {self.author}\n the ISBN number is {self.ISBN}\n and the date is {self.DateAcquired}\n")
-
-    def setLoan(self):
-        self.OnLoan = True
-    
-    def returnLoan(self):
-        self.OnLoan = False
+        print(f"the CD's name is {self.title}\n the CD playtime is {self.PlayingTime}\n the Artists name is {self.Creator}\n the date of loan is {self.DateAcquired}\n")
 
     
-Harry_potter = Book("philosophers stone", "J.K Rowling", 311006, True,"23/09/2023")
-Harry_potter.display()
 
-class CD:
-    def __init__(self,title,Artist,PlayingTime,OnLoan,DateAcquired):
-        self.title = title
-        self.Artist = Artist
-        self.PlayingTime = PlayingTime
-        self.OnLoan = OnLoan
-        self.DateAcquired = DateAcquired
-
-    def display(self):
-        print(f"the CD's name is {self.title}\n the CD playtime is {self.PlayingTime}\n the Artists name is {self.Artist}\n the date of loan is {self.DateAcquired}\n")
-
-    def setLoan(self):
-        self.OnLoan = True
-    
-    def returnLoan(self):
-        self.OnLoan = False
-
-beatles= CD ("let it be", "Beatles", "3 min 50 sec",True,"23/09/2023")
+beatles= CD ("let it be", "Beatles", "3 min 50 sec","23/09/2023")
 beatles.display()
+
+Harry_potter = Book("philosophers stone", "J.K Rowling", 311006,"23/09/2023")
+Harry_potter.display()
 
 
 
